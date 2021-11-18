@@ -30,7 +30,7 @@ with open('metrics.txt', 'w') as outfile:
 #Feature importance
 importances= regr.feature_importances_
 labels= df.columns
-features_df= pd.DataFrame(list(zip(labels, importances)), columns=['features'], 'importance')
+features_df= pd.DataFrame(list(zip(labels, importances)), columns=['features', 'importance'])
 features_df= features_df.sort_values(by='importance', ascending=False)
 
 axis_fs= 18
