@@ -2,9 +2,8 @@ name: your-workflow-name
 on: [push]
 jobs:
   run:
-    runs-on: ubuntu-latest
-    # optionally use a convenient Ubuntu LTS + DVC + CML image
-    # container: docker://ghcr.io/iterative/cml:0-dvc2-base1
+    runs-on: [ubuntu-latest]
+    container: docker://dvcorg/cml-py3:latest
     steps:
       - uses: actions/checkout@v2
       - name: cml_run
@@ -15,10 +14,11 @@ jobs:
           pip install -r requirements.txt
           python train.py
           
-          echo "##  MODEL METRICS" > report.md
+          echo "## Model metrics" > report.md
           cat metrics.txt >> report.md
           
-          echo "## Data Visualization" >> report.md
+          echo "## Data vizualization" >> report.md
           cml-publish feature_importance.png --md >> report.md
           cml-publish residuals.png --md >> report.md
+          
           cml-send-comment report.md
