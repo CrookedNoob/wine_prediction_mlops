@@ -15,7 +15,7 @@ y= df.pop('quality')
 X_train, X_test, y_train, y_test= train_test_split(df, y, test_size=0.3, random_state=seed)
 
 #Model
-regr= RandomForestRegressor(max_depth= 2, random_state=seed)
+regr= RandomForestRegressor(max_depth= 7, random_state=seed)
 regr.fit(X_train, y_train)
 
 #report
