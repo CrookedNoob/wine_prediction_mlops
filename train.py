@@ -11,7 +11,7 @@ seed=142
 df= pd.read_csv('wine_data.csv')
 print(df.head())
 
-y= df.pop['quality']
+y= df.pop('quality')
 X_train, X_test, y_train, y_test= train_test_split(df, y, test_size=0.3, random_state=seed)
 
 #Model
