@@ -8,7 +8,7 @@ import seaborn as sns
 seed=142
 
 
-df= pd.read_csv('C:/Users/majumder/Documents/Python Codes/ML_Prod_Pipeline/wine_prediction/wine_data.csv')
+df= pd.read_csv('wine_data.csv')
 print(df.head())
 
 y= df.pop['quality']
