@@ -36,7 +36,7 @@ features_df= features_df.sort_values(by='importance', ascending=False)
 axis_fs= 18
 title_fs=22
 sns.set(style='whitegrid')
-ax= sns.barplot(x='Importance', y='feature', data=features_df)
+ax= sns.barplot(x='importance', y='features', data=features_df)
 ax.set_xlabel('Importance', font_size=axis_fs)
 ax.set_ylabel('Features', font_size=title_fs)
 
