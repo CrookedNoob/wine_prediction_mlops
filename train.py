@@ -37,8 +37,8 @@ axis_fs= 18
 title_fs=22
 sns.set(style='whitegrid')
 ax= sns.barplot(x='importance', y='features', data=features_df)
-ax.set_xlabel('Importance', font_size=axis_fs)
-ax.set_ylabel('Features', font_size=title_fs)
+ax.set_xlabel('Importance', fontsize=axis_fs)
+ax.set_ylabel('Features', fontsize=title_fs)
 
 plt.tight_layout()
 plt.savefig('feature_importance.png', dpi=120)
